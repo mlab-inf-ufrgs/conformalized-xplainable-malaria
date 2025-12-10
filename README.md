@@ -4,6 +4,14 @@
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
+## Dataset
+
+- Download the images from the following link: [https://data.broadinstitute.org/bbbc/BBBC041/malaria.zip](https://data.broadinstitute.org/bbbc/BBBC041/malaria.zip);
+- Place the `images` and `.json` files in: `data/raw/`;
+- Run the notebook: `/utils/coco2yolo.ipynb` (to generate the COCO format for training and testing);
+- Run the notebook: `/utils/split-folder.ipynb` (to generate `.txt` labels and split the images into train and test sets).
+
+
 A short description of the project.
 
 ## Project Organization
@@ -58,4 +66,3 @@ A short description of the project.
 ```
 
 --------
-
