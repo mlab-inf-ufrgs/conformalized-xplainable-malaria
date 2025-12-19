@@ -91,10 +91,6 @@ jupyter notebook notebooks/yolo-v8-multiclass-model.ipynb
 # Model saved to: models/YOLOv8_best.pt
 # Results in: runs_yolo/detect/train2/
 # Runtime: ~4-6 hours (200 epochs)
-
-# Detectron2 (optional)
-jupyter notebook notebooks/detectron2-multiclass-model.ipynb
-# Model saved to: models/DETECTRON2_final_part_*
 ```
 
 ### 4. Demo App (Optional)
@@ -111,8 +107,7 @@ streamlit run app_demo.py
 ```
 ├── notebooks/
 │   ├── benchmark.ipynb                      # Pipeline 1: Classification + Conformal Prediction
-│   ├── yolo-v8-multiclass-model.ipynb       # Pipeline 2: YOLOv8 detection
-│   └── detectron2-multiclass-model.ipynb    # Pipeline 2: Detectron2 (optional)
+│   └── yolo-v8-multiclass-model.ipynb       # Pipeline 2: YOLOv8 detection
 │
 ├── utils/
 │   ├── coco2yolo.ipynb        # Convert annotations to COCO format
@@ -124,7 +119,6 @@ streamlit run app_demo.py
 │
 ├── models/                    # Trained models (.keras, .pt files)
 ├── runs_yolo/                 # YOLOv8 training outputs
-├── output_detectron2/         # Detectron2 training outputs
 ├── references/                # EDA and examples
 └── app_demo.py               # Streamlit demo
 ```
@@ -144,14 +138,14 @@ streamlit run app_demo.py
 ### Pipeline 2: Object Detection
 - **Dataset**: BBBC041 (1,364 clinical blood smears, manual download)
 - **Classes**: 7 categories (red blood cell, trophozoite, ring, schizont, gametocyte, leukocyte, difficult)
-- **Models**: YOLOv8 Small (~11M parameters), Detectron2
+- **Model**: YOLOv8 Small (~11M parameters)
 
 ### Key Dependencies
 
 | Library | Pipeline 1 | Pipeline 2 | Purpose |
 |---------|------------|------------|---------|
 | tensorflow | ✅ | ❌ | Train CNNs |
-| torch | ❌ | ✅ | YOLOv8/Detectron2 |
+| torch | ❌ | ✅ | YOLOv8 |
 | crepes | ✅ | ❌ | Conformal Prediction |
 | tf-keras-vis | ✅ | ❌ | Grad-CAM |
 | ultralytics | ❌ | ✅ | YOLOv8 |
