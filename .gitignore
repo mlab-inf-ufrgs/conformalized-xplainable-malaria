@@ -1,6 +1,10 @@
 # Data
 # /data/
 
+# GitHub does not support large image sizes
+/data/raw/images/
+/data/processed/dataset/images/
+
 # Mac OS-specific storage files
 .DS_Store
 

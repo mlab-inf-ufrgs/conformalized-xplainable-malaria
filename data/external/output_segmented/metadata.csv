@@ -1,0 +1,76 @@
+filename,label,stage,magnification,stain
+gametocyte_0.png,infected,gametocyte,1000x,Giemsa
+gametocyte_1.png,infected,gametocyte,1000x,Giemsa
+gametocyte_2.png,infected,gametocyte,1000x,Giemsa
+gametocyte_3.png,infected,gametocyte,1000x,Giemsa
+gametocyte_4.png,infected,gametocyte,1000x,Giemsa
+gametocyte_5.png,infected,gametocyte,1000x,Giemsa
+gametocyte_6.png,infected,gametocyte,1000x,Giemsa
+gametocyte_7.png,infected,gametocyte,1000x,Giemsa
+gametocyte_8.png,infected,gametocyte,1000x,Giemsa
+gametocyte_9.png,infected,gametocyte,1000x,Giemsa
+ring_0.png,infected,ring,1000x,Giemsa
+ring_2.png,infected,ring,1000x,Giemsa
+ring_3.png,infected,ring,1000x,Giemsa
+ring_4.png,infected,ring,1000x,Giemsa
+ring_5.png,infected,ring,1000x,Giemsa
+ring_6.png,infected,ring,1000x,Giemsa
+ring_7.png,infected,ring,1000x,Giemsa
+ring_8.png,infected,ring,1000x,Giemsa
+ring_10.png,infected,ring,1000x,Giemsa
+ring_11.png,infected,ring,1000x,Giemsa
+ring_13.png,infected,ring,1000x,Giemsa
+ring_14.png,infected,ring,1000x,Giemsa
+schizont_0.png,infected,schizont,1000x,Giemsa
+schizont_1.png,infected,schizont,1000x,Giemsa
+schizont_2.png,infected,schizont,1000x,Giemsa
+schizont_3.png,infected,schizont,1000x,Giemsa
+schizont_4.png,infected,schizont,1000x,Giemsa
+trophozoite_0.png,infected,trophozoite,1000x,Giemsa
+trophozoite_2.png,infected,trophozoite,1000x,Giemsa
+trophozoite_3.png,infected,trophozoite,1000x,Giemsa
+trophozoite_4.png,infected,trophozoite,1000x,Giemsa
+trophozoite_5.png,infected,trophozoite,1000x,Giemsa
+trophozoite_7.png,infected,trophozoite,1000x,Giemsa
+trophozoite_9.png,infected,trophozoite,1000x,Giemsa
+trophozoite_10.png,infected,trophozoite,1000x,Giemsa
+trophozoite_11.png,infected,trophozoite,1000x,Giemsa
+trophozoite_13.png,infected,trophozoite,1000x,Giemsa
+trophozoite_14.png,infected,trophozoite,1000x,Giemsa
+red blood cell_0.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_1.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_2.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_3.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_4.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_5.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_6.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_7.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_8.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_9.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_10.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_11.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_12.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_13.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_14.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_15.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_16.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_17.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_18.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_20.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_21.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_22.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_23.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_24.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_25.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_27.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_29.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_30.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_31.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_32.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_33.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_34.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_35.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_36.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_37.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_38.png,uninfected,red blood cell,1000x,Giemsa
+red blood cell_39.png,uninfected,red blood cell,1000x,Giemsa
