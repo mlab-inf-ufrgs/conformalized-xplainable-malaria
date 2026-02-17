@@ -1,0 +1,16 @@
+stage,model,n,coverage,errors
+gametocyte,MobileNetV2,10,0.1,9
+gametocyte,ResNet50V2,10,0.0,10
+gametocyte,SimpleCNN,10,0.0,10
+red blood cell,MobileNetV2,37,0.3243,25
+red blood cell,ResNet50V2,37,0.4054,22
+red blood cell,SimpleCNN,37,1.0,0
+ring,MobileNetV2,12,0.8333,2
+ring,ResNet50V2,12,0.5,6
+ring,SimpleCNN,12,0.5833,5
+schizont,MobileNetV2,5,0.0,5
+schizont,ResNet50V2,5,0.0,5
+schizont,SimpleCNN,5,0.0,5
+trophozoite,MobileNetV2,11,0.0909,10
+trophozoite,ResNet50V2,11,0.0909,10
+trophozoite,SimpleCNN,11,0.0909,10
