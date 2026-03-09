@@ -1,17 +1,11 @@
 # Conformalized Explainable Malaria Detection
 
-<a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
-    <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
-</a>
-
 ## Overview
 
 A dual-approach AI system for malaria diagnosis implementing two independent pipelines:
 
 1. **Pipeline 1 (Binary Classification)**: Individual cell classification with conformal prediction and Grad-CAM explainability
 2. **Pipeline 2 (Object Detection)**: Multi-class detection in clinical blood smears using YOLOv8
-
-For this version, those pipelines are standalone as a proof of concept objective. In the near future, a new version will come out where we have a single, unified pipeline that handles all scenarios studied here.
 
 ---
 
@@ -21,14 +15,14 @@ For this version, those pipelines are standalone as a proof of concept objective
 
 ```bash
 # Clone repository
-git clone https://github.com/beylouni/conformalized-xplainable-malaria.git
+git clone git@github.com:mlab-inf-ufrgs/conformalized-xplainable-malaria.git
 cd conformalized-xplainable-malaria
 
 poetry install
 poetry shell
 ```
 
-### 2. Pipeline 1: Binary Classification (Mateus)
+### 2. Pipeline 1: Binary Classification
 
 **Task**: Classify individual cells (Infected/Non-Infected) with uncertainty quantification
 
@@ -48,7 +42,7 @@ jupyter notebook notebooks/benchmark.ipynb
 
 **No manual data download needed** - TensorFlow Datasets handles it automatically!
 
-### 3. Pipeline 2: Clinical Smear Detection (Luciano)
+### 3. Pipeline 2: Clinical Smear Detection
 
 **Task**: Detect multiple cells (7 classes) in complete blood smear images
 
@@ -91,13 +85,6 @@ jupyter notebook notebooks/yolo-v8-multiclass-model.ipynb
 # Model saved to: models/YOLOv8_best.pt
 # Results in: runs_yolo/detect/train2/
 # Runtime: ~4-6 hours (200 epochs)
-```
-
-### 4. Demo App (Optional)
-
-```bash
-streamlit run app_demo.py
-# Open: http://localhost:8501
 ```
 
 ---
@@ -163,13 +150,6 @@ Rajaraman S, Antani SK, Poostchi M, et al. PeerJ. 2018;6:e4568.
 ```
 Ljosa V, Sokolnicki KL, Carpenter AE. Nature Methods. 2012;9(7):637.
 ```
-
----
-
-## Authors
-
-- **Mateus Balda** - [mateusbalda89@gmail.com](mailto:mateusbalda89@gmail.com)
-- **Luciano L. B. Farias** - [beylouniluciano@gmail.com](mailto:beylouniluciano@gmail.com)
 
 ---
 
