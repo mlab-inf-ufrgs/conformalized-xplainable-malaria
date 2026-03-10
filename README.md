@@ -1,11 +1,13 @@
 # Conformalized Explainable Malaria Detection
 
 ## Overview
+A hierarchical approach for malaria diagnosis that implements two independent stages:
 
-A dual-approach AI system for malaria diagnosis implementing two independent pipelines:
+1. **Stage 1 (Object Detection)**: Multi-class detection in clinical blood smears using YOLOv8
+2. **Stage 2 (Binary Classification)**: Individual cell classification with conformal prediction and Grad-CAM explainability
 
-1. **Pipeline 1 (Binary Classification)**: Individual cell classification with conformal prediction and Grad-CAM explainability
-2. **Pipeline 2 (Object Detection)**: Multi-class detection in clinical blood smears using YOLOv8
+## Methodological design
+<img width="4200" height="3525" alt="metho SBCAS" src="https://github.com/user-attachments/assets/9e295620-9828-4aa2-bfd8-765bc38fa923" />
 
 ---
 
@@ -15,38 +17,18 @@ A dual-approach AI system for malaria diagnosis implementing two independent pip
 
 ```bash
 # Clone repository
-git clone git@github.com:mlab-inf-ufrgs/conformalized-xplainable-malaria.git
+git clone "this SSH repo link"
 cd conformalized-xplainable-malaria
 
 poetry install
 poetry shell
 ```
 
-### 2. Pipeline 1: Binary Classification
-
-**Task**: Classify individual cells (Infected/Non-Infected) with uncertainty quantification
-
-```bash
-# Open notebook
-jupyter notebook notebooks/benchmark.ipynb
-
-# Run all cells - the notebook automatically:
-# - Downloads NIH dataset via TensorFlow Datasets (27,558 images)
-# - Trains SimpleCNN, MobileNetV2, ResNet50V2
-# - Applies Conformal Prediction
-# - Generates Grad-CAM visualizations
-
-# Models saved to: models/*.keras
-# Runtime: ~2-3 hours (GPU)
-```
-
-**No manual data download needed** - TensorFlow Datasets handles it automatically!
-
-### 3. Pipeline 2: Clinical Smear Detection
+### 2. Stage 1: Clinical Smear Detection
 
 **Task**: Detect multiple cells (7 classes) in complete blood smear images
 
-#### 3.1. Download and Prepare Data
+#### 2.1. Download and Prepare Data
 
 ```bash
 # Download BBBC041 dataset
@@ -76,7 +58,7 @@ data/
         └── test/        # 120 .txt files
 ```
 
-#### 3.2. Train Models
+#### 2.2. Train Models
 
 ```bash
 # YOLOv8
@@ -87,21 +69,41 @@ jupyter notebook notebooks/yolo-v8-multiclass-model.ipynb
 # Runtime: ~4-6 hours (200 epochs)
 ```
 
+### 3. Stage 2: Binary Classification
+
+**Task**: Classify individual cells (Infected/Non-Infected) with uncertainty quantification
+
+```bash
+# Open notebook
+jupyter notebook notebooks/benchmark.ipynb
+
+# Run all cells - the notebook automatically:
+# - Downloads NIH dataset via TensorFlow Datasets (27,558 images)
+# - Trains SimpleCNN, MobileNetV2, ResNet50V2
+# - Applies Conformal Prediction
+# - Generates Grad-CAM visualizations
+
+# Models saved to: models/*.keras
+# Runtime: ~2-3 hours (GPU)
+```
+
+**No manual data download needed** - TensorFlow Datasets handles it automatically!
+
 ---
 
 ## Project Structure
 
 ```
 ├── notebooks/
-│   ├── benchmark.ipynb                      # Pipeline 1: Classification + Conformal Prediction
-│   └── yolo-v8-multiclass-model.ipynb       # Pipeline 2: YOLOv8 detection
+│   ├── benchmark.ipynb                      # Stage 2: Classification + Conformal Prediction
+│   └── yolo-v8-multiclass-model.ipynb       # Stage 1: YOLOv8 detection
 │
 ├── utils/
 │   ├── coco2yolo.ipynb        # Convert annotations to COCO format
 │   └── split-folders.ipynb    # Convert COCO to YOLO format
 │
 ├── data/
-│   ├── raw/                   # Original BBBC041 dataset (Pipeline 2)
+│   ├── raw/                   # Original BBBC041 dataset (Stage 1)
 │   └── processed/             # Converted annotations
 │
 ├── models/                    # Trained models (.keras, .pt files)
@@ -114,7 +116,12 @@ jupyter notebook notebooks/yolo-v8-multiclass-model.ipynb
 
 ## Technical Details
 
-### Pipeline 1: Binary Classification
+### Stage 1: Object Detection
+- **Dataset**: BBBC041 (1,364 clinical blood smears, manual download)
+- **Classes**: 7 categories (red blood cell, trophozoite, ring, schizont, gametocyte, leukocyte, difficult)
+- **Model**: YOLOv8 Small (~11M parameters)
+
+### Stage 2: Binary Classification
 - **Dataset**: NIH (27,558 segmented cells, automatically downloaded)
 - **Models**: SimpleCNN, MobileNetV2, ResNet50V2
 - **Techniques**: 
@@ -122,14 +129,9 @@ jupyter notebook notebooks/yolo-v8-multiclass-model.ipynb
   - Grad-CAM for visual explainability
   - 95% coverage guarantee
 
-### Pipeline 2: Object Detection
-- **Dataset**: BBBC041 (1,364 clinical blood smears, manual download)
-- **Classes**: 7 categories (red blood cell, trophozoite, ring, schizont, gametocyte, leukocyte, difficult)
-- **Model**: YOLOv8 Small (~11M parameters)
-
 ### Key Dependencies
 
-| Library | Pipeline 1 | Pipeline 2 | Purpose |
+| Library | Stage 2 | Stage 1 | Purpose |
 |---------|------------|------------|---------|
 | tensorflow | ✅ | ❌ | Train CNNs |
 | torch | ❌ | ✅ | YOLOv8 |
@@ -141,14 +143,14 @@ jupyter notebook notebooks/yolo-v8-multiclass-model.ipynb
 
 ## Citation
 
-**NIH Dataset** (Pipeline 1):
-```
-Rajaraman S, Antani SK, Poostchi M, et al. PeerJ. 2018;6:e4568.
-```
-
-**BBBC041 Dataset** (Pipeline 2):
+**BBBC041 Dataset** (Stage 1):
 ```
 Ljosa V, Sokolnicki KL, Carpenter AE. Nature Methods. 2012;9(7):637.
+```
+
+**NIH Dataset** (Stage 2):
+```
+Rajaraman S, Antani SK, Poostchi M, et al. PeerJ. 2018;6:e4568.
 ```
 
 ---
