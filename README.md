@@ -7,7 +7,9 @@ A hierarchical approach for malaria diagnosis that implements two independent st
 2. **Stage 2 (Binary Classification)**: Individual cell classification with conformal prediction and Grad-CAM explainability
 
 ## Methodological design
-<img width="4200" height="3525" alt="metho SBCAS" src="https://github.com/user-attachments/assets/9e295620-9828-4aa2-bfd8-765bc38fa923" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9e295620-9828-4aa2-bfd8-765bc38fa923" width="700">
+</p>
 
 ---
 
